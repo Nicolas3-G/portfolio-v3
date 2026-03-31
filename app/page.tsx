@@ -1,3 +1,4 @@
+import { ContactForm } from "./ContactForm";
 import { CopySkillsButton } from "./CopySkillsButton";
 import { ExperienceSection } from "./ExperienceSection";
 import { ProjectCard } from "./ProjectCard";
@@ -35,54 +36,54 @@ export default function Home() {
             </p>
           </div>
         </div>
-      <div className="absolute bottom-12 left-0 right-0 z-10 px-4 sm:px-8">
-        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-4 sm:grid-cols-3">
-          <div className="flex flex-col border border-zinc-200/70 bg-[#F6F3EA]/90 px-6 py-5 shadow-[0_16px_40px_rgba(15,23,42,0.32)] backdrop-blur-md">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-gold">
-              4+ Years of experience
-            </p>
-            <p className="mt-3 text-sm leading-relaxed text-zinc-700">
-              I have 4 years of experience as a fullstack engineer, often operating as a founding engineer,
-              building frontend and backend for mobile and web using{" "}
-              <span className="font-medium text-accent-gold">JavaScript</span>,{" "}
-              <span className="font-medium text-accent-gold">TypeScript</span>,{" "}
-              <span className="font-medium text-accent-gold">React</span>,{" "}
-              <span className="font-medium text-accent-gold">Next.js</span>,{" "}
-              <span className="font-medium text-accent-gold">React Native</span>,{" "}
-              <span className="font-medium text-accent-gold">Node.js</span>, and more.
-            </p>
+        <div className="absolute bottom-12 left-0 right-0 z-10 px-4 sm:px-8">
+          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-4 sm:grid-cols-3">
+            <div className="flex flex-col border border-zinc-200/70 bg-[#F6F3EA]/90 px-6 py-5 shadow-[0_16px_40px_rgba(15,23,42,0.32)] backdrop-blur-md">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-gold">
+                4+ Years of experience
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-zinc-700">
+                I have 4 years of experience as a fullstack engineer, often operating as a founding engineer,
+                building frontend and backend for mobile and web using{" "}
+                <span className="font-medium text-accent-gold">JavaScript</span>,{" "}
+                <span className="font-medium text-accent-gold">TypeScript</span>,{" "}
+                <span className="font-medium text-accent-gold">React</span>,{" "}
+                <span className="font-medium text-accent-gold">Next.js</span>,{" "}
+                <span className="font-medium text-accent-gold">React Native</span>,{" "}
+                <span className="font-medium text-accent-gold">Node.js</span>, and more.
+              </p>
+            </div>
+            <div className="flex flex-col border border-zinc-200/70 bg-[#F6F3EA]/90 px-6 py-5 shadow-[0_16px_40px_rgba(15,23,42,0.32)] backdrop-blur-md">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-gold">
+                AI First Approach
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-zinc-700">
+                By pairing strong development skills, a keen design eye, and the latest AI
+                technologies, I deliver results quickly and efficiently. I make use of tools
+                like agentic coding, MCP servers, and Agent Skills, and have led numerous AI
+                integrations and research projects,keeping me on the bleeding edge of the space.
+              </p>
+            </div>
+            <div className="flex flex-col border border-zinc-200/70 bg-[#F6F3EA]/90 px-6 py-5 shadow-[0_16px_40px_rgba(15,23,42,0.32)] backdrop-blur-md">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-gold">
+                Communication & Teamwork
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-zinc-700">
+                From training and mentoring new team members, conducting interviews and weighing in
+                on hiring, to crafting visual documentation and presentations for both technical
+                and non-technical audiences, I pride myself on clear communication and strong
+                collaboration. I love working on teams, but also thrive independently, with a track
+                record of owning projects from initial concept through to delivery.
+              </p>
+            </div>
           </div>
-          <div className="flex flex-col border border-zinc-200/70 bg-[#F6F3EA]/90 px-6 py-5 shadow-[0_16px_40px_rgba(15,23,42,0.32)] backdrop-blur-md">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-gold">
-              AI First Approach
-            </p>
-            <p className="mt-3 text-sm leading-relaxed text-zinc-700">
-              By pairing strong development skills, a keen design eye, and the latest AI
-              technologies, I deliver results quickly and efficiently. I make use of tools
-              like agentic coding, MCP servers, and Agent Skills, and have led numerous AI
-              integrations and research projects,keeping me on the bleeding edge of the space.
-            </p>
-          </div>
-          <div className="flex flex-col border border-zinc-200/70 bg-[#F6F3EA]/90 px-6 py-5 shadow-[0_16px_40px_rgba(15,23,42,0.32)] backdrop-blur-md">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-gold">
-              Communication & Teamwork
-            </p>
-            <p className="mt-3 text-sm leading-relaxed text-zinc-700">
-              From training and mentoring new team members, conducting interviews and weighing in
-              on hiring, to crafting visual documentation and presentations for both technical
-              and non-technical audiences, I pride myself on clear communication and strong
-              collaboration. I love working on teams, but also thrive independently, with a track
-              record of owning projects from initial concept through to delivery.
-            </p>
+          <div className="mt-5 flex flex-col items-center gap-2">
+            <svg className="h-6 w-6 text-zinc-500" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+            <span className="text-sm font-medium text-zinc-600">Scroll for more</span>
           </div>
         </div>
-        <div className="mt-5 flex flex-col items-center gap-2">
-          <svg className="h-6 w-6 text-zinc-500" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
-          <span className="text-sm font-medium text-zinc-600">Scroll for more</span>
-        </div>
-      </div>
       </main>
       <ExperienceSection />
       <section
@@ -310,43 +311,42 @@ export default function Home() {
         <div className="mx-auto mt-14 grid w-full max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2">
           {Array.from({ length: 4 }).map((_, idx) => (
             <ProjectCard key={idx}>
-            <article className="group relative">
-              <div className="relative aspect-[4/3] overflow-hidden bg-transparent">
-                <div
-                  className="absolute inset-0 transition-[clip-path] duration-500 [clip-path:inset(0_12.5%_0_12.5%)] group-hover:[clip-path:inset(0)]"
-                  aria-hidden
-                >
-                  <img
-                    src="/project-placeholder.jpg"
-                    alt="Project preview placeholder"
-                    className="h-full w-full object-cover"
-                  />
-                  <div className="pointer-events-none absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/40" />
-                </div>
-                <div className="pointer-events-none absolute inset-0 flex flex-col justify-between px-4 py-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  <p className="text-left text-lg font-medium text-white">
-                    Project
-                  </p>
-                  <div className="space-y-2">
-                    <p className="max-w-xs text-left text-xs text-zinc-100/80">
-                      Short description of the project goes here as placeholder text.
+              <article className="group relative">
+                <div className="relative aspect-[4/3] overflow-hidden bg-transparent">
+                  <div
+                    className="absolute inset-0 transition-[clip-path] duration-500 [clip-path:inset(0_12.5%_0_12.5%)] group-hover:[clip-path:inset(0)]"
+                    aria-hidden
+                  >
+                    <img
+                      src="/project-placeholder.jpg"
+                      alt="Project preview placeholder"
+                      className="h-full w-full object-cover"
+                    />
+                    <div className="pointer-events-none absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/40" />
+                  </div>
+                  <div className="pointer-events-none absolute inset-0 flex flex-col justify-between px-4 py-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    <p className="text-left text-lg font-medium text-white">
+                      Project
                     </p>
-                    <div className="flex flex-wrap gap-2">
-                      {["React", "Next.js", "Tailwind"].map((tech, i) => (
-                        <span
-                          key={tech}
-                          className={`rounded-full bg-white/20 px-2.5 py-1 text-xs font-medium text-white opacity-0 backdrop-blur-sm transition-opacity duration-500 [transform:translateZ(0)] group-hover:opacity-100 ${
-                            i === 0 ? "delay-[500ms]" : i === 1 ? "delay-[600ms]" : "delay-[700ms]"
-                          }`}
-                        >
-                          {tech}
-                        </span>
-                      ))}
+                    <div className="space-y-2">
+                      <p className="max-w-xs text-left text-xs text-zinc-100/80">
+                        Short description of the project goes here as placeholder text.
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {["React", "Next.js", "Tailwind"].map((tech, i) => (
+                          <span
+                            key={tech}
+                            className={`rounded-full bg-white/20 px-2.5 py-1 text-xs font-medium text-white opacity-0 backdrop-blur-sm transition-opacity duration-500 [transform:translateZ(0)] group-hover:opacity-100 ${i === 0 ? "delay-[500ms]" : i === 1 ? "delay-[600ms]" : "delay-[700ms]"
+                              }`}
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </article>
+              </article>
             </ProjectCard>
           ))}
         </div>
@@ -490,72 +490,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="border border-zinc-200/80 bg-white/80 p-6 shadow-[0_18px_45px_rgba(15,23,42,0.18)] backdrop-blur-sm sm:p-7">
-              <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-zinc-700">
-                Send a message
-              </h3>
-              <form className="mt-5 space-y-4" aria-label="Contact form (UI only)">
-                <div className="flex flex-col gap-1.5">
-                  <label htmlFor="contact-name" className="text-xs font-medium uppercase tracking-[0.14em] text-zinc-600">
-                    Name
-                  </label>
-                  <input
-                    id="contact-name"
-                    type="text"
-                    autoComplete="name"
-                    placeholder="How should I address you?"
-                    className="h-10 border border-zinc-200/80 bg-white/80 px-3 text-sm text-zinc-900 shadow-sm outline-none transition focus:border-accent-gold/80 focus:ring-2 focus:ring-accent-gold/20"
-                  />
-                </div>
-                <div className="flex flex-col gap-1.5">
-                  <label htmlFor="contact-email" className="text-xs font-medium uppercase tracking-[0.14em] text-zinc-600">
-                    Email
-                  </label>
-                  <input
-                    id="contact-email"
-                    type="email"
-                    autoComplete="email"
-                    placeholder="you@example.com"
-                    className="h-10 border border-zinc-200/80 bg-white/80 px-3 text-sm text-zinc-900 shadow-sm outline-none transition focus:border-accent-gold/80 focus:ring-2 focus:ring-accent-gold/20"
-                  />
-                </div>
-                <div className="flex flex-col gap-1.5">
-                  <label htmlFor="contact-topic" className="text-xs font-medium uppercase tracking-[0.14em] text-zinc-600">
-                    What are you interested in?
-                  </label>
-                  <select
-                    id="contact-topic"
-                    className="h-10 border border-zinc-200/80 bg-white/80 px-3 text-sm text-zinc-900 shadow-sm outline-none transition focus:border-accent-gold/80 focus:ring-2 focus:ring-accent-gold/20"
-                    defaultValue=""
-                  >
-                    <option value="" disabled>
-                      Select a topic
-                    </option>
-                    <option value="founding-engineer">Founding engineer / early hire</option>
-                    <option value="project-help">Help shipping a project</option>
-                    <option value="consulting">Consulting / advisory</option>
-                    <option value="other">Something else</option>
-                  </select>
-                </div>
-                <div className="flex flex-col gap-1.5">
-                  <label htmlFor="contact-message" className="text-xs font-medium uppercase tracking-[0.14em] text-zinc-600">
-                    Message
-                  </label>
-                  <textarea
-                    id="contact-message"
-                    rows={4}
-                    placeholder="Share a bit about what you&apos;re working on and how I can help."
-                    className="border border-zinc-200/80 bg-white/80 px-3 py-2 text-sm text-zinc-900 shadow-sm outline-none transition focus:border-accent-gold/80 focus:ring-2 focus:ring-accent-gold/20"
-                  />
-                </div>
-                <button
-                  type="button"
-                  className="mt-1 inline-flex w-full items-center justify-center gap-2 bg-zinc-900 px-4 py-2.5 text-sm font-medium text-zinc-50 shadow-[0_10px_25px_rgba(15,23,42,0.35)] transition-colors hover:bg-zinc-950"
-                >
-                  <span>Send (UI only)</span>
-                </button>
-              </form>
-            </div>
+            <ContactForm />
           </div>
         </div>
       </section>
