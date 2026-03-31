@@ -147,6 +147,61 @@ export function ExperienceSection() {
   const fullTimeItems = EXPERIENCE_ITEMS.slice(0, TIMELINE_LENGTH);
   const internshipItems = EXPERIENCE_ITEMS.slice(TIMELINE_LENGTH);
 
+  const getLogoForCompany = (companyName: string) => {
+    switch (companyName) {
+      case "DPD Framework":
+        return (
+          <img
+            src="/logos/dpd-logo.png"
+            alt="DPD Framework logo"
+            className="h-9 w-9 object-contain"
+          />
+        );
+      case "Overview World News":
+        return (
+          <img
+            src="/logos/overview-logo.png"
+            alt="Overview World News logo"
+            className="h-11 w-11 object-contain"
+          />
+        );
+      case "Fiverr":
+        return (
+          <img
+            src="/logos/fiverr-logo.png"
+            alt="Fiverr logo"
+            className="h-9 w-9 object-contain"
+          />
+        );
+      case "Pre Framing Corp":
+        return (
+          <img
+            src="/logos/PF-logo.png"
+            alt="Pre Framing Corp logo"
+            className="h-9 w-9 object-contain"
+          />
+        );
+      case "MinuteZero":
+        return (
+          <img
+            src="/logos/minutezero_logo.png"
+            alt="MinuteZero logo"
+            className="h-9 w-9 object-contain"
+          />
+        );
+      case "GrantAide":
+        return (
+          <img
+            src="/logos/grantaide-logo.png"
+            alt="GrantAide logo"
+            className="h-9 w-9 object-contain"
+          />
+        );
+      default:
+        return null;
+    }
+  };
+
   return (
     <section
       id="experience"
@@ -212,6 +267,7 @@ export function ExperienceSection() {
                 companyName={item.companyName}
                 description={item.description}
                 bullets={item.bullets}
+                logo={getLogoForCompany(item.companyName)}
               />
             </div>
           </div>
@@ -236,14 +292,12 @@ export function ExperienceSection() {
 
             {showInternships &&
               internshipItems.map((item) => (
-                <div
-                  key={item.companyName}
-                  className="mt-6"
-                >
+                <div key={item.companyName} className="mt-6">
                   <ExperienceCard
                     companyName={item.companyName}
                     description={item.description}
                     bullets={item.bullets}
+                    logo={getLogoForCompany(item.companyName)}
                   />
                 </div>
               ))}
