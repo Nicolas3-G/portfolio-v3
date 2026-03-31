@@ -1,0 +1,134 @@
+﻿Nicolas Guimont
+Full-Stack & Mobile Developer (React, React Native, Next.js, Node.js, Firebase)
+San Francisco Bay Area | Email: nicguimont@gmail.com | Portfolio Site: www.nicdev.dev | LinkedIn: https://www.linkedin.com/in/nicolas3 
+
+
+
+
+________________
+
+
+
+
+
+
+SUMMARY_________________________________________
+
+Full-stack web and mobile developer with hands-on experience across iOS, Android, and web. Specializes in React, React Native, Next.js, Node.js, Firebase, and cloud-native architectures for scalable B2B/B2C apps. Delivers cross-platform solutions that blend thoughtful UI with robust, automation-ready backends to drive engagement, reliability, and speed to impact.
+
+
+Recent Wins
+
+ • Boosted user engagement by 30%+ and DAUs by 60% through backend-led feature development
+• Cut operational workload by 90%+ via automation pipelines and internal tooling
+• Shipped and submitted apps to both the Apple App Store and Google Play
+• Enabled persona-based team analytics for leadership via scalable backend systems
+
+
+Core Technologies
+
+React, React Native, Next.js (SSG/ISR/SSR), Node.js, Express, Firebase, Supabase, TypeScript, JavaScript, HTML5, CSS3, Tailwind/Nativewind CSS, MongoDB, JWT, REST APIs, Python, Google Cloud Platform, AWS, Selenium, Unreal Engine, TestFlight, Google Play Console
+
+
+
+
+EXPERIENCE______________________________________________
+
+The DPD Framework | #DPDFramework                                        April 2025–Present
+
+
+Mobile Application Developer (iOS & Android)                                
+San Francisco Bay Area
+
+• Built a React Native app that helps users dynamically switch between Dreamer, Planner, and Doer personas to improve communication and execution
+ 
+• Implemented a 3D circular card carousel on the main page using Reanimated for an immersive UX
+
+• Designed scalable Firebase data structures to support multi-tier professional organizations and fast data delivery
+
+• Automated survey scoring and results delivery (from ~15 minutes to instant), improving business efficiency and scalability
+
+• Collaborated with founder, product, and design to translate vision into a production app; submitted to App Store and Google Play
+
+
+------
+
+
+Overview                                                                        December 2023–Present
+
+Full-Stack / Backend Engineer — — San Francisco, CA
+
+
+ • Architected a modern Next.js platform using SSG, ISR, and SSR to optimize performance and cost across paired web/mobile apps
+ 
+• Sole developer and maintainer of the Node.js/Express backend; launched 10+ major features that increased DAUs by 45–60%
+
+• Conceived a marquee engagement feature that lifted user engagement by 30%+
+
+• Implemented topic recognition with text embeddings, improving categorization accuracy across 200k+ articles
+
+• Built internal tooling (Next.js/React) that improved observability and cut debugging time by 50%+
+
+• Automated news indexing and preparation using Selenium and third-party APIs; reduced translation costs by ~22%
+
+• Deployed via Vercel with GitHub Actions CI/CD; instrumented error monitoring and performance logging for rapid triage
+
+
+• Submitted the iOS mobile app to the App Store
+
+
+------
+Fiverr
+Full-Stack Developer — December 2023–June 2024 — San Francisco, CA (Contract)
+
+• Built production web apps for SMB clients with Next.js (App Router) and React 18; shipped responsive UIs using modern HTML/CSS and accessibility best practices (WCAG)
+
+• Implemented SSR/ISR/SSG strategies in Next.js to improve SEO, first render, and cache efficiency across marketing and app surfaces
+
+• Designed secure API routes and server actions; integrated Supabase (Postgres, Auth, Storage) and Firebase (Auth, Firestore/RTDB, Cloud Functions) for authentication, data, and file workflows
+
+• Modeled relational data in Supabase Postgres; wrote SQL queries/migrations;
+
+• Implemented authentication flows and role-based authorization across the stack
+
+
+• Integrated third-party APIs and webhooks; set up background jobs and scheduled tasks for data sync and notifications
+
+• Collaborated with founders and designers on scoping, estimation, and iterative delivery; consistently met timelines and documented decisions
+
+
+------
+Pre Framing Corp.
+Junior Software Engineer / Full-Stack Web Developer / Unreal Engine Mobile Developer — March 2023–June 2024 — Berkeley, CA
+
+• Built React/Next.js UI components and an Android app (Unreal Engine) with AWS patching for B2B construction software
+
+• Engineered license-key authentication backed by MongoDB Atlas
+
+• Trained and integrated Google Vertex AI (AutoML) to improve image/PDF data extraction; led OCR research and integrations
+
+• Extracted handwritten data via Google Vision API; designed intuitive UI/UX to navigate results
+
+• Converted legacy codebases and shipped quality iterations with an international team
+
+
+------
+MinuteZero (formerly PAIR Public Relations)
+Software Engineer / Web Application Developer — February 2023–August 2023 — San Francisco, CA
+
+• Prototyped the startup website (React/Next.js), iterating with the founder to refine user journeys and design
+
+• Built a custom data-extraction app leveraging Google Custom Search, PipFeed Article API, and Hunter.io to streamline workflows
+
+
+------
+EDUCATION
+
+• FreeCodeCamp — JavaScript Algorithms & Data Structures Certification (Nov 2022)
+• FreeCodeCamp — Responsive Web Design Certification (Sep 2022)
+• FreeCodeCamp — Front End Development Libraries Certification (Jan 2023)
+
+
+ADDITIONAL
+Top Skills: Linux, DigitalOcean, Next.js
+Interests: Scalable SaaS, content platforms, developer tooling, automation, UI/UX polish, Music

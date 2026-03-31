@@ -1,26 +1,34 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Reusable accent (gold) – use with text-accent-gold, bg-accent-gold, etc. */
+  --color-accent-gold: #C2A46D;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes pixel-cat-walk {
+  0% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(120%);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.pixel-cat {
+  image-rendering: pixelated;
+  animation: pixel-cat-walk 18s linear infinite;
+}
+
+@keyframes cats-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.cats-marquee-track {
+  display: inline-flex;
+  animation: cats-marquee 40s linear infinite;
 }
