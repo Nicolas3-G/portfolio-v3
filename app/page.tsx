@@ -309,7 +309,12 @@ export default function Home() {
           </h2>
         </div>
         <div className="mx-auto mt-14 grid w-full max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2">
-          {Array.from({ length: 4 }).map((_, idx) => (
+          {[
+            { image: "/projects/overview/overview.png", fit: "contain" as const, title: "Overview World News", description: "A news aggregation platform that has processed over 450k articles complete with iOS and Web App", techs: ["React", "Next.js", "Tailwind", "GCP", "Firebase", "Node.js"] },
+            { image: "/projects/dpd/dpd.png", fit: "contain" as const, title: "DPDing Mobile App", description: "A cross platform mobile app and admin dashboard built to improve workplace productivity and team efficiency", techs: ["React", "Next.js", "Tailwind", "Expo", "React Native", "Firebase"] },
+            { image: "/projects/cuida/cuida.jfif", fit: "contain" as const, title: "Cuida Mobile App", description: "A platform for connecting immigrants and allies to education, information, and community", techs: ["Tailwind", "React Native", "Node.js", "Expo", "Firebase", "TypeScript"] },
+            { image: "/projects/better-git/better-git.png", fit: "contain" as const, title: "Better Git", description: "A visual interface for Git that mirrors CLI commands, making version control more intuitive and easier to learn.", techs: ["React", "Next.js", "Tailwind", "TypeScript"] },
+          ].map((project, idx) => (
             <ProjectCard key={idx}>
               <article className="group relative">
                 <div className="relative aspect-[4/3] overflow-hidden bg-transparent">
@@ -318,22 +323,22 @@ export default function Home() {
                     aria-hidden
                   >
                     <img
-                      src="/project-placeholder.jpg"
-                      alt="Project preview placeholder"
-                      className="h-full w-full object-cover"
+                      src={project.image}
+                      alt={`${project.title} preview`}
+                      className={`h-full w-full ${project.fit === "contain" ? "object-contain" : "object-cover"}`}
                     />
                     <div className="pointer-events-none absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/40" />
                   </div>
                   <div className="pointer-events-none absolute inset-0 flex flex-col justify-between px-4 py-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                     <p className="text-left text-lg font-medium text-white">
-                      Project
+                      {project.title}
                     </p>
                     <div className="space-y-2">
                       <p className="max-w-xs text-left text-xs text-zinc-100/80">
-                        Short description of the project goes here as placeholder text.
+                        {project.description}
                       </p>
                       <div className="flex flex-wrap gap-2">
-                        {["React", "Next.js", "Tailwind"].map((tech, i) => (
+                        {project.techs.map((tech, i) => (
                           <span
                             key={tech}
                             className={`rounded-full bg-white/20 px-2.5 py-1 text-xs font-medium text-white opacity-0 backdrop-blur-sm transition-opacity duration-500 [transform:translateZ(0)] group-hover:opacity-100 ${i === 0 ? "delay-[500ms]" : i === 1 ? "delay-[600ms]" : "delay-[700ms]"
