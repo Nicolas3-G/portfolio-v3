@@ -14,7 +14,7 @@ const EXPERIENCE_ITEMS = [
     ],
   },
   {
-    companyName: "Overview World News",
+    companyName: "Overview World Press",
     description: "Founding Fullstack Engineer · December 2023 - Present",
     bullets: [
       "Increased categorization accuracy by 35% for 450,000+ articles using embeddings.",
@@ -157,11 +157,11 @@ export function ExperienceSection() {
             className="h-9 w-9 object-contain"
           />
         );
-      case "Overview World News":
+      case "Overview World Press":
         return (
           <img
             src="/logos/overview-logo.png"
-            alt="Overview World News logo"
+            alt="Overview World Press logo"
             className="h-11 w-11 object-contain"
           />
         );

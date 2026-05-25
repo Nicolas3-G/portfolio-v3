@@ -34,7 +34,7 @@ function Toast({
     return (
         <div
             role="alert"
-            className={`pointer-events-auto flex w-80 items-start gap-3 border px-4 py-3.5 shadow-[0_14px_35px_rgba(0,0,0,0.15)] backdrop-blur-md transition-all duration-300 ${visible
+            className={`pointer-events-auto flex max-w-[min(20rem,calc(100vw-2rem))] w-full items-start gap-3 border px-4 py-3.5 shadow-[0_14px_35px_rgba(0,0,0,0.15)] backdrop-blur-md transition-all duration-300 sm:w-80 sm:max-w-none ${visible
                 ? "translate-y-0 opacity-100"
                 : "-translate-y-3 opacity-0"
                 } ${isSuccess
@@ -274,7 +274,7 @@ export function ContactForm() {
                     <button
                         type="submit"
                         disabled={status === "sending"}
-                        className="mt-1 inline-flex w-full items-center justify-center gap-2 bg-zinc-900 px-4 py-2.5 text-sm font-medium text-zinc-50 shadow-[0_10px_25px_rgba(15,23,42,0.35)] transition-colors hover:bg-zinc-950 disabled:opacity-60"
+                        className="mt-1 inline-flex w-full items-center justify-center gap-2 bg-zinc-900 px-4 py-2.5 text-sm font-medium text-zinc-50 shadow-[0_10px_25px_rgba(15,23,42,0.35)] transition-opacity duration-200 ease-out hover:enabled:opacity-50 disabled:opacity-60"
                     >
                         <span>
                             {status === "sending" ? "Sending…" : "Send"}

@@ -1,3 +1,5 @@
+import { ExperienceBullet } from "./ExperienceBullet";
+
 export function ExperienceCard({
   companyName,
   description,
@@ -19,7 +21,7 @@ export function ExperienceCard({
       >
         {logo ?? null}
       </div>
-      <div>
+      <div className="min-w-0">
         <p className="text-xl font-semibold tracking-tight text-zinc-900 sm:text-2xl">
           {companyName}
         </p>
@@ -35,7 +37,7 @@ export function ExperienceCard({
           )}
         </p>
         {bullets.length > 0 && (
-          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm text-zinc-600 marker:text-accent-gold">
+          <ul className="mt-3 list-none space-y-1 pl-0 text-sm text-zinc-600">
             {bullets.map((item, i) => {
               if (companyName === "DPD Framework") {
                 const highlightsByIndex: Record<number, string> = {
@@ -48,16 +50,16 @@ export function ExperienceCard({
                 if (highlight && item.includes(highlight)) {
                   const [before, after] = item.split(highlight);
                   return (
-                    <li key={i}>
+                    <ExperienceBullet key={i}>
                       {before}
                       <span className="font-semibold">{highlight}</span>
                       {after}
-                    </li>
+                    </ExperienceBullet>
                   );
                 }
               }
 
-              if (companyName === "Overview World News") {
+              if (companyName === "Overview World Press") {
                 const highlightsByIndex: Record<number, string> = {
                   0: "35% for 450,000+ articles",
                   1: "increased daily active users by 45-60%",
@@ -69,11 +71,11 @@ export function ExperienceCard({
                 if (highlight && item.includes(highlight)) {
                   const [before, after] = item.split(highlight);
                   return (
-                    <li key={i}>
+                    <ExperienceBullet key={i}>
                       {before}
                       <span className="font-semibold">{highlight}</span>
                       {after}
-                    </li>
+                    </ExperienceBullet>
                   );
                 }
               }
@@ -89,11 +91,11 @@ export function ExperienceCard({
                 if (highlight && item.includes(highlight)) {
                   const [before, after] = item.split(highlight);
                   return (
-                    <li key={i}>
+                    <ExperienceBullet key={i}>
                       {before}
                       <span className="font-semibold">{highlight}</span>
                       {after}
-                    </li>
+                    </ExperienceBullet>
                   );
                 }
               }
@@ -105,11 +107,11 @@ export function ExperienceCard({
                   if (item.includes(highlight)) {
                     const [before, after] = item.split(highlight);
                     return (
-                      <li key={i}>
+                      <ExperienceBullet key={i}>
                         {before}
                         <span className="font-semibold">{highlight}</span>
                         {after}
-                      </li>
+                      </ExperienceBullet>
                     );
                   }
                 }
@@ -126,15 +128,14 @@ export function ExperienceCard({
                     );
 
                   return (
-                    <li
-                      key={i}
-                      dangerouslySetInnerHTML={{ __html: withHighlightedStack }}
-                    />
+                    <ExperienceBullet key={i} html={withHighlightedStack} />
                   );
                 }
               }
 
-              return <li key={i}>{item}</li>;
+              return (
+                <ExperienceBullet key={i}>{item}</ExperienceBullet>
+              );
             })}
           </ul>
         )}

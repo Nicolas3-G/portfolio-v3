@@ -1,34 +1,21 @@
-"use client";
+import Link from "next/link";
 
-import { useState } from "react";
-
-export function ProjectCard({ children }: { children: React.ReactNode }) {
-  const [pos, setPos] = useState({ x: 0, y: 0 });
-  const [hovered, setHovered] = useState(false);
-
+export function ProjectCard({
+  href,
+  ariaLabel,
+  children,
+}: {
+  href: string;
+  ariaLabel?: string;
+  children: React.ReactNode;
+}) {
   return (
-    <div
-      className="relative"
-      onMouseMove={(e) => {
-        setPos({ x: e.clientX, y: e.clientY });
-        setHovered(true);
-      }}
-      onMouseLeave={() => setHovered(false)}
-      style={{ cursor: hovered ? "none" : undefined }}
+    <Link
+      href={href}
+      aria-label={ariaLabel}
+      className="group block rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-gold focus-visible:ring-offset-2 focus-visible:ring-offset-[#F6F3EA]"
     >
       {children}
-      {hovered && (
-        <div
-          className="pointer-events-none fixed z-[100] rounded-full bg-zinc-900/90 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm"
-          style={{
-            left: pos.x,
-            top: pos.y,
-            transform: "translate(-50%, -50%)",
-          }}
-        >
-          Learn more
-        </div>
-      )}
-    </div>
+    </Link>
   );
 }

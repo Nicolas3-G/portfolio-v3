@@ -1,12 +1,14 @@
+import { PROJECTS, titleToSlug } from "@/lib/projects";
 import { ContactForm } from "./ContactForm";
 import { CopySkillsButton } from "./CopySkillsButton";
 import { ExperienceSection } from "./ExperienceSection";
+import { HeroCards } from "./HeroCards";
 import { ProjectCard } from "./ProjectCard";
 
 export default function Home() {
   return (
     <div id="top">
-      <main className="relative z-0 -mt-16 h-screen min-h-[400px] overflow-hidden">
+      <main className="relative z-0 -mt-16 h-screen min-h-[400px] overflow-hidden max-sm:overflow-visible">
         <video
           src="/Hero-Video-encode.mp4"
           autoPlay
@@ -16,8 +18,8 @@ export default function Home() {
           className="h-full w-full object-cover"
           aria-label="Hero background video"
         />
-        <div className="absolute left-4 top-20 z-10 sm:left-8 sm:top-24">
-          <div className="relative min-w-[24rem] border border-zinc-200/70 bg-[#F6F3EA]/90 px-7 py-6 shadow-[0_18px_45px_rgba(15,23,42,0.35)] backdrop-blur-md">
+        <div className="hero-intro-card absolute left-4 right-4 top-20 z-10 max-w-none sm:right-auto sm:left-8 sm:top-24 sm:max-w-none">
+          <div className="relative w-full min-w-0 border border-zinc-200/70 bg-[#F6F3EA] px-5 py-5 shadow-[0_18px_45px_rgba(15,23,42,0.35)] sm:min-w-[24rem] sm:px-7 sm:py-6">
             <div className="pointer-events-none absolute right-4 top-4 h-20 w-20 overflow-hidden rounded-full border border-zinc-300/80 bg-zinc-200/60 shadow-sm">
               <img
                 src="/pfp-top.jpg"
@@ -36,52 +38,22 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="absolute bottom-12 left-0 right-0 z-10 px-4 sm:px-8">
-          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-4 sm:grid-cols-3">
-            <div className="flex flex-col border border-zinc-200/70 bg-[#F6F3EA]/90 px-6 py-5 shadow-[0_16px_40px_rgba(15,23,42,0.32)] backdrop-blur-md">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-gold">
-                4+ Years of experience
-              </p>
-              <p className="mt-3 text-sm leading-relaxed text-zinc-700">
-                I have 4 years of experience as a fullstack engineer, often operating as a founding engineer,
-                building frontend and backend for mobile and web using{" "}
-                <span className="font-medium text-accent-gold">JavaScript</span>,{" "}
-                <span className="font-medium text-accent-gold">TypeScript</span>,{" "}
-                <span className="font-medium text-accent-gold">React</span>,{" "}
-                <span className="font-medium text-accent-gold">Next.js</span>,{" "}
-                <span className="font-medium text-accent-gold">React Native</span>,{" "}
-                <span className="font-medium text-accent-gold">Node.js</span>, and more.
-              </p>
-            </div>
-            <div className="flex flex-col border border-zinc-200/70 bg-[#F6F3EA]/90 px-6 py-5 shadow-[0_16px_40px_rgba(15,23,42,0.32)] backdrop-blur-md">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-gold">
-                AI First Approach
-              </p>
-              <p className="mt-3 text-sm leading-relaxed text-zinc-700">
-                By pairing strong development skills, a keen design eye, and the latest AI
-                technologies, I deliver results quickly and efficiently. I make use of tools
-                like agentic coding, MCP servers, and Agent Skills, and have led numerous AI
-                integrations and research projects,keeping me on the bleeding edge of the space.
-              </p>
-            </div>
-            <div className="flex flex-col border border-zinc-200/70 bg-[#F6F3EA]/90 px-6 py-5 shadow-[0_16px_40px_rgba(15,23,42,0.32)] backdrop-blur-md">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-gold">
-                Communication & Teamwork
-              </p>
-              <p className="mt-3 text-sm leading-relaxed text-zinc-700">
-                From training and mentoring new team members, conducting interviews and weighing in
-                on hiring, to crafting visual documentation and presentations for both technical
-                and non-technical audiences, I pride myself on clear communication and strong
-                collaboration. I love working on teams, but also thrive independently, with a track
-                record of owning projects from initial concept through to delivery.
-              </p>
-            </div>
-          </div>
+        <div className="absolute bottom-12 left-0 right-0 z-10 px-4 pb-[max(env(safe-area-inset-bottom),0px)] sm:px-8">
+          <HeroCards />
           <div className="mt-5 flex flex-col items-center gap-2">
-            <svg className="h-6 w-6 text-zinc-500" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden>
+            <svg
+              className="h-6 w-6 text-accent-gold drop-shadow-[0_1px_3px_rgba(0,0,0,0.75)]"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+              viewBox="0 0 24 24"
+              aria-hidden
+            >
               <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>
-            <span className="text-sm font-medium text-zinc-600">Scroll for more</span>
+            <span className="text-sm font-medium text-accent-gold [text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_0_18px_rgba(0,0,0,0.45)]">
+              Scroll for more
+            </span>
           </div>
         </div>
       </main>
@@ -94,7 +66,7 @@ export default function Home() {
           <h2 className="text-center text-3xl font-semibold tracking-tight text-zinc-900 sm:text-4xl">
             Skills
           </h2>
-          <div className="absolute right-0 top-1/2 -translate-y-1/2">
+          <div className="mt-4 flex justify-center sm:mt-0 sm:absolute sm:right-0 sm:top-1/2 sm:block sm:-translate-y-1/2 sm:justify-start">
             <CopySkillsButton />
           </div>
         </div>
@@ -309,40 +281,33 @@ export default function Home() {
           </h2>
         </div>
         <div className="mx-auto mt-14 grid w-full max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2">
-          {[
-            { image: "/projects/overview/overview.png", fit: "contain" as const, title: "Overview World News", description: "A news aggregation platform that has processed over 450k articles complete with iOS and Web App", techs: ["React", "Next.js", "Tailwind", "GCP", "Firebase", "Node.js"] },
-            { image: "/projects/dpd/dpd.png", fit: "contain" as const, title: "DPDing Mobile App", description: "A cross platform mobile app and admin dashboard built to improve workplace productivity and team efficiency", techs: ["React", "Next.js", "Tailwind", "Expo", "React Native", "Firebase"] },
-            { image: "/projects/cuida/cuida.jfif", fit: "contain" as const, title: "Cuida Mobile App", description: "A platform for connecting immigrants and allies to education, information, and community", techs: ["Tailwind", "React Native", "Node.js", "Expo", "Firebase", "TypeScript"] },
-            { image: "/projects/better-git/better-git.png", fit: "contain" as const, title: "Better Git", description: "A visual interface for Git that mirrors CLI commands, making version control more intuitive and easier to learn.", techs: ["React", "Next.js", "Tailwind", "TypeScript"] },
-          ].map((project, idx) => (
-            <ProjectCard key={idx}>
-              <article className="group relative">
-                <div className="relative aspect-[4/3] overflow-hidden bg-transparent">
-                  <div
-                    className="absolute inset-0 transition-[clip-path] duration-500 [clip-path:inset(0_12.5%_0_12.5%)] group-hover:[clip-path:inset(0)]"
-                    aria-hidden
-                  >
-                    <img
-                      src={project.image}
-                      alt={`${project.title} preview`}
-                      className={`h-full w-full ${project.fit === "contain" ? "object-contain" : "object-cover"}`}
-                    />
-                    <div className="pointer-events-none absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/40" />
-                  </div>
-                  <div className="pointer-events-none absolute inset-0 flex flex-col justify-between px-4 py-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                    <p className="text-left text-lg font-medium text-white">
+          {PROJECTS.map((project) => (
+            <ProjectCard
+              key={titleToSlug(project.title)}
+              href={`/projects/${titleToSlug(project.title)}`}
+              ariaLabel={`${project.title}: view project details`}
+            >
+              <article className="relative overflow-hidden">
+                <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#F6F3EA]">
+                  <img
+                    src={project.image}
+                    alt={`${project.title} preview`}
+                    className={`absolute inset-0 size-full object-center ${project.fit === "contain" ? "object-contain" : "object-cover"}`}
+                  />
+                  <div className="pointer-events-none absolute inset-0 hidden origin-bottom scale-y-0 bg-gradient-to-t from-black/55 via-black/55 via-[1%] to-transparent transition-transform duration-300 ease-out group-hover:scale-y-100 group-focus-within:scale-y-100 sm:block" />
+                  <div className="pointer-events-none absolute inset-0 flex flex-col justify-start px-4 py-4 sm:justify-between">
+                    <p className="text-left text-lg font-medium text-black">
                       {project.title}
                     </p>
-                    <div className="space-y-2">
+                    <div className="mt-0 hidden space-y-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-hover:delay-300 group-focus-within:opacity-100 group-focus-within:delay-300 sm:mt-0 sm:block">
                       <p className="max-w-xs text-left text-xs text-zinc-100/80">
                         {project.description}
                       </p>
                       <div className="flex flex-wrap gap-2">
-                        {project.techs.map((tech, i) => (
+                        {project.techs.map((tech) => (
                           <span
                             key={tech}
-                            className={`rounded-full bg-white/20 px-2.5 py-1 text-xs font-medium text-white opacity-0 backdrop-blur-sm transition-opacity duration-500 [transform:translateZ(0)] group-hover:opacity-100 ${i === 0 ? "delay-[500ms]" : i === 1 ? "delay-[600ms]" : "delay-[700ms]"
-                              }`}
+                            className="rounded-full bg-white/20 px-2.5 py-1 text-xs font-medium text-white backdrop-blur-sm"
                           >
                             {tech}
                           </span>
@@ -431,7 +396,7 @@ export default function Home() {
       >
         <div className="mx-auto w-full max-w-5xl">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-start">
-            <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+            <div className="order-1 flex flex-col items-center text-center lg:order-0 lg:col-start-1 lg:row-start-1 lg:items-start lg:text-left">
               <h2 className="text-3xl font-semibold tracking-tight text-zinc-900 sm:text-4xl">
                 Contact
               </h2>
@@ -442,7 +407,7 @@ export default function Home() {
               <div className="mt-8 flex flex-wrap items-center justify-center gap-4 lg:justify-start">
                 <a
                   href="mailto:nicguimont@gmail.com"
-                  className="inline-flex items-center gap-2 border border-zinc-200/70 bg-zinc-900 px-5 py-2.5 text-sm font-medium text-zinc-50 shadow-[0_10px_25px_rgba(15,23,42,0.35)] transition-colors hover:border-accent-gold/70 hover:bg-zinc-950"
+                  className="inline-flex items-center gap-2 border border-zinc-200/70 bg-zinc-900 px-5 py-2.5 text-sm font-medium text-zinc-50 shadow-[0_10px_25px_rgba(15,23,42,0.35)] transition-opacity duration-200 ease-out hover:opacity-50"
                 >
                   <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -464,38 +429,40 @@ export default function Home() {
               <p className="mt-6 text-xs font-medium uppercase tracking-[0.22em] text-zinc-500">
                 Currently open to new opportunities & collaborations
               </p>
-              <div className="mt-4 w-full max-w-xl text-left">
-                <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-zinc-700">
-                  Cats of San Francisco
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-zinc-700">
-                  Thanks for checking out my portfolio, here&apos;s some cats!
-                </p>
-                <div className="mt-4 overflow-hidden border border-zinc-200/80 bg-white/80 p-3 shadow-sm">
-                  <div className="flex gap-4">
-                    <div className="cats-marquee-track gap-4">
-                      {Array.from({ length: 2 }).map((_, loopIdx) => (
-                        <div key={loopIdx} className="flex gap-4">
-                          {[1, 2, 3, 4, 5, 6, 7, 8].map((cat) => (
-                            <div
-                              key={`${loopIdx}-${cat}`}
-                              className="h-[110px] w-32 shrink-0 overflow-hidden border border-zinc-200/80 bg-zinc-100"
-                            >
-                              <img
-                                src={`/cats/cat-${cat}.jpg`}
-                                alt={`Cat ${cat}`}
-                                className="h-full w-full object-cover"
-                              />
-                            </div>
-                          ))}
-                        </div>
-                      ))}
-                    </div>
+            </div>
+            <div className="order-2 lg:order-0 lg:row-span-2 lg:row-start-1 lg:col-start-2">
+              <ContactForm />
+            </div>
+            <div className="order-3 mx-auto flex w-full max-w-xl flex-col items-center text-center lg:order-0 lg:col-start-1 lg:row-start-2 lg:mx-0 lg:items-start lg:text-left">
+              <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-zinc-700">
+                Cats of San Francisco
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-zinc-700">
+                Thanks for checking out my portfolio, here&apos;s some cats!
+              </p>
+              <div className="mt-4 w-full overflow-hidden border border-zinc-200/80 bg-white/80 p-3 shadow-sm">
+                <div className="flex gap-4">
+                  <div className="cats-marquee-track gap-4">
+                    {Array.from({ length: 2 }).map((_, loopIdx) => (
+                      <div key={loopIdx} className="flex gap-4">
+                        {[1, 2, 3, 4, 5, 6, 7, 8].map((cat) => (
+                          <div
+                            key={`${loopIdx}-${cat}`}
+                            className="h-[110px] w-32 shrink-0 overflow-hidden border border-zinc-200/80 bg-zinc-100"
+                          >
+                            <img
+                              src={`/cats/cat-${cat}.jpg`}
+                              alt={`Cat ${cat}`}
+                              className="h-full w-full object-cover"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
             </div>
-            <ContactForm />
           </div>
         </div>
       </section>

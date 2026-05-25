@@ -32,3 +32,50 @@
   display: inline-flex;
   animation: cats-marquee 40s linear infinite;
 }
+
+@keyframes hero-intro-card-in {
+  from {
+    transform: translateX(calc(-100% - 1rem));
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.hero-intro-card {
+  animation: hero-intro-card-in 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.5s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-intro-card {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .header-slide-in {
+    animation: none;
+    transform: none;
+    pointer-events: auto;
+  }
+}
+
+@keyframes header-slide-in-from-top {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.header-slide-in {
+  animation: header-slide-in-from-top 0.55s cubic-bezier(0.22, 1, 0.36, 1) 1.25s both;
+}
+
