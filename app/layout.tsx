@@ -5,8 +5,8 @@ import { HeaderNav } from "./HeaderNav";
 import { ScrollToHash } from "./ScrollToHash";
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Personal portfolio",
+  title: "Nicolas | Full Stack Developer",
+  description: "Full stack software engineer specializing in modern web and mobile development, scalable applications, and creating polished digital experiences.",
 };
 
 export default function RootLayout({
