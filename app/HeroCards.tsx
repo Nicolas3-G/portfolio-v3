@@ -22,10 +22,10 @@ const HERO_CARDS = [
     title: "AI First Approach",
     body: (
       <>
-        By pairing strong development skills, a keen design eye, and the latest AI technologies, I
-        deliver results quickly and efficiently. I make use of tools like agentic coding, MCP
-        servers, and Agent Skills, and have led numerous AI integrations and research
-        projects,keeping me on the bleeding edge of the space.
+        By combining strong engineering skills, a sharp design eye, and the latest AI
+        technologies, I deliver high-quality results quickly and efficiently. I leverage tools
+        like agentic coding, MCP servers, and Agent Skills, and have led numerous AI integrations
+        and research initiatives, keeping me at the forefront of a rapidly evolving space.
       </>
     ),
   },
