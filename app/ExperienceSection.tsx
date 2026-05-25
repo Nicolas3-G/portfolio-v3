@@ -6,7 +6,7 @@ import { ExperienceCard } from "./ExperienceCard";
 const EXPERIENCE_ITEMS = [
   {
     companyName: "DPD Framework",
-    description: "Founding Fullstack Engineer · April 2025 - Present",
+    description: "Founding Fullstack Engineer - Contractor · April 2025 - Present",
     bullets: [
       "Developed a React Native iOS & Android mobile app.",
       "Automated business flows, reducing manual processes by nearly 100%.",
