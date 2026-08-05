@@ -12,8 +12,8 @@ export type Project = {
   siteUrl?: string;
   /** Primary link button label (defaults to "View site"). */
   siteLinkLabel?: string;
-  /** Multiple link buttons (e.g. iOS and Android app stores). */
-  siteLinks?: { label: string; url: string }[];
+  /** Multiple link buttons (e.g. iOS and Android app stores). Omit `url` to render that entry as a disabled placeholder. */
+  siteLinks?: { label: string; url?: string }[];
   /** Optional note shown below the "View site" button. */
   siteNote?: string;
   /** Disabled button label when the site is not yet available (no siteUrl). */
@@ -80,8 +80,13 @@ I was responsible for technical evaluation of the system, leading research into 
     description:
       "A platform for connecting immigrants and allies to education, information, and community",
     techs: ["Tailwind", "React Native", "Node.js", "Expo", "Firebase", "TypeScript"],
-    siteButtonLabel: "Under Development",
-    siteNote: "Expected Release July 2026",
+    siteLinks: [
+      {
+        label: "Website",
+        url: "https://getcuida.org/",
+      },
+    ],
+    siteNote: "App currently awaiting review for launch",
     contributions: [
       "Designed Cuida as a personal project focused on centralizing immigrant resources",
       "Built the mobile application for iOS and Android using React Native",
@@ -102,6 +107,10 @@ Development is still in progress, with plans to release the app on iOS and Andro
       "A cross platform mobile app and admin dashboard built to improve workplace productivity and team efficiency",
     techs: ["React", "Next.js", "Expo", "React Native", "Firebase", "PostgreSQL"],
     siteLinks: [
+      {
+        label: "Website",
+        url: "https://dpdframework.com/",
+      },
       {
         label: "iOS App",
         url: "https://apps.apple.com/us/app/dpding-dreamer-planner-doer/id6746777165",

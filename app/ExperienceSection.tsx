@@ -6,7 +6,7 @@ import { ExperienceCard } from "./ExperienceCard";
 const EXPERIENCE_ITEMS = [
   {
     companyName: "DPD Framework",
-    description: "Founding Fullstack Engineer - Contractor · April 2025 - Present",
+    description: "Founding Fullstack Engineer · April 2025 - Present",
     bullets: [
       "Developed a React Native iOS & Android mobile app.",
       "Automated business flows, reducing manual processes by nearly 100%.",
@@ -15,7 +15,7 @@ const EXPERIENCE_ITEMS = [
   },
   {
     companyName: "Overview World Press",
-    description: "Founding Fullstack Engineer · December 2023 - Present",
+    description: "Founding Fullstack Engineer · December 2023 - April 2025",
     bullets: [
       "Increased categorization accuracy by 35% for 450,000+ articles using embeddings.",
       "Shipped 10+ major features with Node.js that increased daily active users by 45-60%.",
@@ -25,7 +25,7 @@ const EXPERIENCE_ITEMS = [
   },
   {
     companyName: "Fiverr",
-    description: "Fullstack Software Engineer - Contractor · December 2023 - June 2024",
+    description: "Fullstack Software Engineer - Freelance Contractor · December 2023 - June 2024",
     bullets: [
       "Consistently delivered projects on or before deadlines.",
       "Regularly debugged and fixed large unfamiliar codebases, quickly adapting to new technologies.",

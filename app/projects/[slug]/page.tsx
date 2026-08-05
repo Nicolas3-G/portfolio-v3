@@ -113,36 +113,46 @@ export default async function ProjectPage({ params }: Props) {
             {project.siteLinks && project.siteLinks.length > 0 ? (
               <div className="mt-4 flex w-full flex-col items-center gap-2">
                 <div className="flex flex-wrap items-center justify-center gap-3">
-                  {project.siteLinks.map((link) => (
-                    <a
-                      key={link.url}
-                      href={link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 border border-zinc-200/70 bg-zinc-900 px-5 py-2.5 text-sm font-medium text-zinc-50 shadow-[0_10px_25px_rgba(15,23,42,0.35)] transition-colors hover:border-accent-gold/70 hover:bg-zinc-950"
-                    >
-                      {link.label}
-                      <svg
-                        className="h-4 w-4"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth={2}
-                        viewBox="0 0 24 24"
-                        aria-hidden
+                  {project.siteLinks.map((link) =>
+                    link.url ? (
+                      <a
+                        key={link.label}
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2 border border-zinc-200/70 bg-zinc-900 px-5 py-2.5 text-sm font-medium text-zinc-50 shadow-[0_10px_25px_rgba(15,23,42,0.35)] transition-colors hover:border-accent-gold/70 hover:bg-zinc-950"
                       >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                        />
-                      </svg>
-                    </a>
-                  ))}
+                        {link.label}
+                        <svg
+                          className="h-4 w-4"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth={2}
+                          viewBox="0 0 24 24"
+                          aria-hidden
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          />
+                        </svg>
+                      </a>
+                    ) : (
+                      <span
+                        key={link.label}
+                        aria-disabled="true"
+                        className="inline-flex cursor-not-allowed items-center justify-center gap-2 border border-zinc-200/70 bg-zinc-400/90 px-5 py-2.5 text-sm font-medium text-zinc-100"
+                      >
+                        {link.label}
+                      </span>
+                    )
+                  )}
                 </div>
                 {project.siteNote ? (
-                  <p className="text-center text-xs text-zinc-500">
+                  <span className="inline-flex items-center justify-center rounded-full border border-zinc-200/80 bg-white/80 px-4 py-1.5 text-center text-xs font-medium text-zinc-600 shadow-sm">
                     {project.siteNote}
-                  </p>
+                  </span>
                 ) : null}
               </div>
             ) : project.siteUrl ? (
@@ -170,9 +180,9 @@ export default async function ProjectPage({ params }: Props) {
                   </svg>
                 </a>
                 {project.siteNote ? (
-                  <p className="text-center text-xs text-zinc-500">
+                  <span className="inline-flex items-center justify-center rounded-full border border-zinc-200/80 bg-white/80 px-4 py-1.5 text-center text-xs font-medium text-zinc-600 shadow-sm">
                     {project.siteNote}
-                  </p>
+                  </span>
                 ) : null}
               </div>
             ) : (
@@ -184,9 +194,9 @@ export default async function ProjectPage({ params }: Props) {
                   {project.siteButtonLabel ?? "View site"}
                 </span>
                 {project.siteNote ? (
-                  <p className="text-center text-xs text-zinc-500">
+                  <span className="inline-flex items-center justify-center rounded-full border border-zinc-200/80 bg-white/80 px-4 py-1.5 text-center text-xs font-medium text-zinc-600 shadow-sm">
                     {project.siteNote}
-                  </p>
+                  </span>
                 ) : null}
               </div>
             )}
