@@ -18,17 +18,19 @@ React, React Native, Next.js (SSG/ISR/SSR), Node.js, Express, Firebase, Supabase
 Experience
 
 
-Full-Stack Software Engineer (Web, Backend), Overview — Dec 2023 • Present
+Full-Stack Software Engineer, DPD Framework — Apr 2025 • Present
+Contract Position
+• Implemented 3D custom user interfaces using React Native, Reanimated, and React Three Fiber
+• Designed scalable Firebase data structures to support multi-tier professional organizations and fast data delivery
+• Cut operational workload by 90%+ via automation pipelines and internal tooling
+
+
+Full-Stack Software Engineer, Overview — Dec 2023 • Apr 2025
  • Architected a modern Next.js platform using SSG, ISR, and SSR to optimize performance and cost
 • Conceived, architected, and implemented digital editor in chief that resulted in an increase of 30% in user engagement
 • Built internal tooling (Next.js/React) that improved observability and cut debugging time by 50%
 • Researched and implemented translation optimizations resulting in 90% reduction in operating cost while improving translation quality with Node.js
 
-Full-Stack Software Engineer (Web, Mobile), DPD Framework — Apr 2025 • Present
-Contract Position
-• Implemented 3D custom user interfaces using React Native, Reanimated, and React Three Fiber
-• Designed scalable Firebase data structures to support multi-tier professional organizations and fast data delivery
-• Cut operational workload by 90%+ via automation pipelines and internal tooling
 
 
 
@@ -51,19 +53,19 @@ ________________
 Experience (Continued)
 
 
-Full-Stack Software Engineer (Web, Backend), Fiverr — Dec 2023 • June 2024
+Full-Stack Software Engineer, Fiverr — Dec 2023 • June 2024
 Freelancing Contracts
 • Built production web apps for SMB clients with Next.js (App Router) and React 18; shipped responsive UI’s using modern HTML/CSS and accessibility best practices (WCAG)
 • Designed secure API routes and server actions; integrated Supabase (Postgres, Auth, Storage) and Firebase (Auth, Firestore/RTDB, Cloud Functions) for authentication, data, and file workflows
 • Implemented SSR/ISR/SSG strategies in Next.js to improve SEO, first render, and cache efficiency across marketing and app surfaces
 
 
-Full-Stack Software Engineer (Web), Pre Framing Corp — Mar 2023 • Jun 2024
+Full-Stack Software Engineer, Pre Framing Corp — Mar 2023 • Jun 2024
 • Trained and integrated Google Vertex AI (AutoML) to improve image/PDF data extraction; led OCR research and integrations
 • Converted legacy codebases and shipped quality iterations with an international team
 • Built React/Next.js UI components and an Android app (Unreal Engine) with AWS patching for B2B construction software
 
 
-Full-Stack Software Engineer (Web), MinuteZero — Feb 2023 • Aug 2023
+Full-Stack Software Engineer, MinuteZero — Feb 2023 • Aug 2023
 • Prototyped startup website (React/Next.js), iterating with the founder to refine user journeys and design
 • Built a custom data-extraction app leveraging Google Custom Search, PipFeed Article API, and Hunter.io to streamline workflows
